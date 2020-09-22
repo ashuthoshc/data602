@@ -1,0 +1,13 @@
+SUMMARY
+
+df.info() gives the data types of all the columns which are necessary to have a good look at the data and the columns to be retained according to the task. Describe command provides min, max range of the data, and also the mean, median values, through which the possibility of outliers could be envisioned. In this example, we see that the mean and median values don't have a huge difference depicting that the probability of the presence of outliers is low. From the isnull.sum() it is clear that the dataset is clean apart from a few null values in the column sqft.above which is handled and verified. 
+
+The heatmap shows the correlation between the price and other features given in the dataset. Higher correlation showing the greater influence of that particular feature on the price. In this example, sqft living, grade, and sqft above have a greater influence on the price.
+
+The prices increase as the number of bedrooms increases stating the fact that more dwellers more the price or it could also be because of the increase in the area of the house as the number of bedrooms increase except some anomalies with 11 and 33 bedrooms. 
+
+Similarly, sqft_living also shows a strong positive correlation when plotted vs price. The second graph shows that the sqft_living as a continuous relation on the price. This is due the fact that the Sqft_living is not discrete value but has a continuous relationship with the price of the house. 
+
+The column sqft_living has a major impact on the prices as shown above. To this end, the regression model is trained on the training set which includes 80% of random values and tested on the random 20% of values. 
+
+The result show that model can be trained to the predict the price of house where sqft_living, sqft_above and grade has better correlation compared to other factors. Thus, it shows more accurate values when compared to other parameters. This is varified by using the predictor on test_model. The values approximately matches the train_model. 
